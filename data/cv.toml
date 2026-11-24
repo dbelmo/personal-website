@@ -1,0 +1,211 @@
+[profile]
+name = "David Belmonte"
+handle = "david@redteam"
+title = "Cyber Security Engineer"
+subtitle = "Penetration Testing · Red Team Operations · Medical Devices & Cloud Security"
+location = "Spain"
+availability = "Offensive Security · Red Teaming · Cloud & Device Assessments"
+summary = "Cyber Security Engineer focused on offensive security assessments across medical devices and cloud ecosystems. Experienced in adversary simulation, exploit development, AI-assisted penetration testing, technical risk communication, and hands-on security awareness training."
+
+[[highlights]]
+label = "Certifications"
+value = "CRTL · CRTO · CPTS"
+detail = "Offensive & Red Team"
+
+[[highlights]]
+label = "Experience"
+value = "5+ Years"
+detail = "Medical Devices & Cloud"
+
+[[highlights]]
+label = "Core Focus"
+value = "Red Teaming"
+detail = "Pentesting & Exploit Dev"
+
+[[highlights]]
+label = "Languages"
+value = "ES · CA · EN · DE"
+detail = "Native ES/CA · C1 EN"
+
+[[experience]]
+role = "Cyber Security Engineer"
+organization = "Werfen"
+location = "Spain"
+period = "Sep 2021 – Present"
+type = "Full-Time"
+summary = "Penetration testing across regulated medical devices and cloud-based healthcare platforms, partnering with engineering teams to close high-impact attack paths."
+bullets = [
+    "Penetration testing of medical devices and cloud-based products across web, network, and embedded interfaces.",
+    "Leveraging AI to accelerate penetration testing workflows, reconnaissance, and exploit development.",
+    "Helping engineering and product teams understand real-world cybersecurity risks through technical reviews of penetration test reports.",
+    "Raising cybersecurity awareness across the organization through introductory sessions and interactive hands-on labs."
+]
+tags = ["Medical Devices", "Cloud Security", "Exploit Dev", "AI-Assisted Pentesting", "Risk Reviews", "Hands-On Labs"]
+
+[[experience]]
+role = "Cyber Security Engineer (Internship)"
+organization = "Werfen"
+location = "Spain"
+period = "Apr 2021 – Jun 2021"
+type = "Internship"
+summary = "Hands-on offensive security evaluation of legacy medical instrumentation and end-to-end technical reporting."
+bullets = [
+    "Penetration testing of legacy versions of medical devices, covering end-to-end assessment and structured technical reporting.",
+    "Executed multiple distinct offensive security scenarios, each demonstrating a different exploitation path against the instrument."
+]
+tags = ["Legacy Medical Devices", "Offensive Scenarios", "Technical Reporting"]
+
+[[education]]
+degree = "Degree in Computer Engineering"
+institution = "Universitat Autònoma de Barcelona"
+location = "Cerdanyola del Vallès, Spain"
+period = "2017 – 2021"
+level = "EQF Level 6"
+notes = "Foundations in computer architecture, operating systems, networking, software engineering, and systems security."
+
+[[certifications]]
+code = "CRTL"
+name = "Certified Red Team Lead"
+issuer = "Zero-Point Security"
+date = "Jul 2026"
+mode = "Online"
+tier = "Lead"
+focus = "Advanced Adversary Emulation & EDR Evasion"
+summary = "Advanced red team operations focusing on bypassing modern endpoint detection and response (EDR) controls, hardened enterprise defenses, and operational security."
+competencies = [
+    "Adversary simulation and emulation",
+    "Cobalt Strike",
+    "Red team operations",
+    "Command and control (C2)",
+    "Post-exploitation",
+    "Lateral movement",
+    "Advanced defense evasion",
+    "EDR evasion",
+    "Security control bypass",
+    "Stealth and OPSEC"
+]
+
+[[certifications]]
+code = "CRTO"
+name = "Certified Red Team Operator"
+issuer = "Zero-Point Security"
+date = "May 2026"
+mode = "Online"
+tier = "Operator"
+focus = "Enterprise Red Team Operations & C2"
+summary = "Practical red teaming in simulated Active Directory enterprise environments using Cobalt Strike, disciplined OPSEC, and realistic adversary tradecraft."
+competencies = [
+    "Adversary simulation and emulation",
+    "Cobalt Strike",
+    "Red team operations",
+    "Command and control (C2)",
+    "Post-exploitation",
+    "Lateral movement",
+    "Defense evasion",
+    "Stealth and OPSEC"
+]
+
+[[certifications]]
+code = "CPTS"
+name = "Certified Penetration Testing Specialist"
+issuer = "Hack The Box"
+date = "Jan 2026"
+mode = "Online"
+tier = "Specialist"
+focus = "Full-Scope Penetration Testing & Attack Chaining"
+summary = "Rigorous hands-on penetration testing certification covering deep vulnerability discovery, non-obvious attack chaining, impact demonstration, and executive-grade reporting."
+competencies = [
+    "Vulnerability identification and assessment",
+    "Exploit development and exploitation",
+    "Identifying non-obvious attack vectors",
+    "Vulnerability chaining",
+    "Attack path analysis",
+    "Creative problem-solving in security assessments",
+    "Impact assessment and demonstration",
+    "Security remediation guidance",
+    "Professional penetration testing reporting",
+    "Risk communication"
+]
+
+[[skill_groups]]
+category = "Offensive Security & Red Teaming"
+items = [
+    "Penetration Testing",
+    "Red Team Operations",
+    "Cobalt Strike & C2",
+    "Web Application Security",
+    "OWASP Top 10",
+    "Exploit Development & Chaining",
+    "EDR & Defense Evasion",
+    "Kali Linux"
+]
+
+[[skill_groups]]
+category = "Cloud, Network & Product Security"
+items = [
+    "Network Security",
+    "Cloud Security (AWS)",
+    "Azure Cloud Security",
+    "Medical Device Security",
+    "Lateral Movement & Post-Exploitation"
+]
+
+[[skill_groups]]
+category = "Engineering, AI & Advisory"
+items = [
+    "Python",
+    "AI-Assisted Pentesting & Exploit Dev",
+    "Technical Risk Reviews",
+    "Penetration Test Reporting",
+    "Security Awareness & Hands-On Labs"
+]
+
+[[languages]]
+name = "Spanish"
+cefr = "Native"
+detail = "Mother tongue"
+
+[[languages]]
+name = "Catalan"
+cefr = "Native"
+detail = "Mother tongue"
+
+[[languages]]
+name = "English"
+cefr = "C1"
+detail = "Listening, Reading, Speaking & Writing"
+
+[[languages]]
+name = "German"
+cefr = "A1"
+detail = "Listening, Reading, Speaking & Writing"
+
+[[killchain]]
+phase = "01"
+name = "Discovery & Attack Paths"
+certs = ["CPTS"]
+description = "Uncovering non-obvious attack vectors, misconfigurations, and chained exposure paths across web, network, cloud, and devices."
+
+[[killchain]]
+phase = "02"
+name = "Exploitation & Initial Access"
+certs = ["CPTS", "CRTO"]
+description = "Developing and adapting exploits—augmented with Python and AI workflows—to validate real-world impact safely."
+
+[[killchain]]
+phase = "03"
+name = "C2 & Lateral Movement"
+certs = ["CRTO", "CRTL"]
+description = "Operating Cobalt Strike C2 infrastructure and simulating realistic adversary movement through enterprise environments."
+
+[[killchain]]
+phase = "04"
+name = "EDR & Defense Evasion"
+certs = ["CRTL", "CRTO"]
+description = "Applying OPSEC discipline, security control bypasses, and advanced evasion techniques to stress-test detection engineering."
+
+[[killchain]]
+phase = "05"
+name = "Risk & Remediation"
+certs = ["CPTS"]
+description = "Translating complex exploit chains into clear engineering reviews, remediation plans, and hands-on awareness labs."

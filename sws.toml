@@ -1,0 +1,34 @@
+# =============================================================================
+# static-web-server (Rust) Hardened Configuration
+# =============================================================================
+
+[general]
+host = "0.0.0.0"
+port = 8080
+root = "/public"
+page404 = "/public/404.html"
+compression = true
+directory-listing = false
+security-headers = false
+health = true
+log-level = "warn"
+
+[advanced]
+
+[[advanced.headers]]
+source = "**/*"
+[advanced.headers.headers]
+Content-Security-Policy = "default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+Referrer-Policy = "no-referrer"
+Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+Cross-Origin-Opener-Policy = "same-origin"
+Cross-Origin-Resource-Policy = "same-origin"
+Cache-Control = "public, max-age=300, must-revalidate"
+
+[[advanced.headers]]
+source = "**/*.{css,svg,ico,woff2,png,webp}"
+[advanced.headers.headers]
+Cache-Control = "public, max-age=86400"

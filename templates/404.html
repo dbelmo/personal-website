@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}404 Not Found — {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="section">
+  <div class="container error-wrap">
+    <div class="terminal-window">
+      <div class="terminal-bar">
+        <span class="term-dots" aria-hidden="true">
+          <i class="dot-red"></i>
+          <i class="dot-amber"></i>
+          <i class="dot-green"></i>
+        </span>
+        <span class="term-title">http-response — 404</span>
+        <span class="term-badge">NOT FOUND</span>
+      </div>
+      <div class="terminal-body">
+        <p class="term-line"><span class="prompt">$</span> probe --target requested-route</p>
+        <p class="term-out term-err">HTTP/1.1 404 Not Found — The requested path does not exist.</p>
+        <p class="term-line"><span class="prompt">$</span> ls /routes</p>
+        <p class="term-out">
+          <a href="/">/ (Home)</a> &nbsp;·&nbsp;
+          <a href="/cv/">/cv/</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

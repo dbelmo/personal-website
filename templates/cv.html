@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}CV &amp; Experience — {{ config.title }}{% endblock title %}
+
+{% block content %}
+{% set cv = load_data(path="data/cv.toml") %}
+
+<section class="page-banner">
+  <div class="container">
+    <span class="section-kicker">// DOSSIER :: CURRICULUM VITAE</span>
+    <h1>{{ cv.profile.name }}</h1>
+    <p class="banner-sub">{{ cv.profile.title }} — {{ cv.profile.subtitle }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container cv-layout">
+    <div class="cv-main">
+      <div class="cv-block" id="profile">
+        <h2 class="cv-heading"><span class="idx">01</span> Profile</h2>
+        <p class="prose-lead">{{ cv.profile.summary }}</p>
+      </div>
+
+      <div class="cv-block" id="experience">
+        <h2 class="cv-heading"><span class="idx">02</span> Work Experience</h2>
+        <div class="timeline">
+          {% for job in cv.experience %}
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-head">
+              <div>
+                <h3>{{ job.role }}</h3>
+                <p class="timeline-org">{{ job.organization }} · {{ job.location }}</p>
+              </div>
+              <div class="timeline-badges">
+                <span class="meta-pill">{{ job.period }}</span>
+                <span class="meta-pill pill-accent">{{ job.type }}</span>
+              </div>
+            </div>
+            <p class="timeline-summary">{{ job.summary }}</p>
+            <ul class="bullet-list">
+              {% for b in job.bullets %}
+              <li>{{ b }}</li>
+              {% endfor %}
+            </ul>
+            <div class="tag-row">
+              {% for t in job.tags %}
+              <span class="tag">{{ t }}</span>
+              {% endfor %}
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="cv-block" id="certifications">
+        <h2 class="cv-heading"><span class="idx">03</span> Certifications</h2>
+        <div class="accordion-stack">
+          {% for cert in cv.certifications %}
+          <details class="dossier-details" {% if loop.first %}open{% endif %}>
+            <summary>
+              <span class="cert-code">{{ cert.code }}</span>
+              <span class="summary-main">
+                <strong>{{ cert.name }}</strong>
+                <small>{{ cert.issuer }} · {{ cert.date }} ({{ cert.mode }})</small>
+              </span>
+              <span class="summary-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="dossier-body">
+              <p>{{ cert.summary }}</p>
+              <ul class="chip-grid">
+                {% for c in cert.competencies %}
+                <li>{{ c }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </details>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="cv-block" id="education">
+        <h2 class="cv-heading"><span class="idx">04</span> Education</h2>
+        {% for edu in cv.education %}
+        <article class="card">
+          <div class="card-top">
+            <span class="meta-pill">{{ edu.period }}</span>
+            <span class="meta-pill pill-accent">{{ edu.level }}</span>
+          </div>
+          <h3>{{ edu.degree }}</h3>
+          <p class="card-sub">{{ edu.institution }} · {{ edu.location }}</p>
+          <p class="card-desc">{{ edu.notes }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+
+    <aside class="cv-sidebar">
+      <div class="card sidebar-card" id="skills">
+        <h2 class="cv-heading"><span class="idx">05</span> Technical Skills</h2>
+        {% for group in cv.skill_groups %}
+        <div class="skill-group">
+          <h3>{{ group.category }}</h3>
+          <ul class="skill-pill-list">
+            {% for item in group.items %}
+            <li class="skill-pill">{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="card sidebar-card" id="languages">
+        <h2 class="cv-heading"><span class="idx">06</span> Languages</h2>
+        <div class="lang-list">
+          {% for lang in cv.languages %}
+          <div class="lang-row">
+            <div>
+              <strong>{{ lang.name }}</strong>
+              <small>{{ lang.detail }}</small>
+            </div>
+            <span class="lang-badge">{{ lang.cefr }}</span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+{% endblock content %}
