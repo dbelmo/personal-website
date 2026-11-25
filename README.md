@@ -10,6 +10,16 @@ docker compose up --build -d
 
 Open `http://localhost:8080`.
 
+## Deploy on Cloudflare Pages
+
+Connect `dbelmo/personal-website` in **Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git** with:
+
+- **Build command:** `zola build --base-url $CF_PAGES_URL`
+- **Build output directory:** `public`
+- **Environment variable:** `ZOLA_VERSION` = `0.22.1`
+
+Security and cache headers are mirrored from `sws.toml` into [static/_headers](static/_headers).
+
 ## Deploy on Any Small VM (with Automatic Let's Encrypt HTTPS)
 
 ```bash

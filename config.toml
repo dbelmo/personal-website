@@ -1,7 +1,7 @@
 base_url = "http://localhost:8080"
 title = "David Belmonte"
 author = "David Belmonte"
-description = "Cyber Security Engineer specializing in penetration testing, red team operations, medical device security, and cloud security."
+description = "Cybersecurity Engineer specializing in penetration testing, red team operations, medical device security, and cloud security."
 default_language = "en"
 
 compile_sass = true
@@ -18,7 +18,7 @@ external_links_no_referrer = true
 [extra]
 author = "David Belmonte"
 handle = "dbelmo"
-role = "Cyber Security Engineer"
+role = "Cybersecurity Engineer"
 tagline = "Penetration Testing · Red Team Operations · Cloud & Medical Device Security"
 github_url = "https://github.com/dbelmo"
 linkedin_url = "https://www.linkedin.com/in/david-belmonte-garc%C3%ADa/"

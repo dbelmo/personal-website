@@ -1,11 +1,11 @@
 [profile]
 name = "David Belmonte"
 handle = "david@redteam"
-title = "Cyber Security Engineer"
+title = "Cybersecurity Engineer"
 subtitle = "Penetration Testing · Red Team Operations · Medical Devices & Cloud Security"
 location = "Spain"
 availability = "Offensive Security · Red Teaming · Cloud & Device Assessments"
-summary = "Cyber Security Engineer focused on offensive security assessments across medical devices and cloud ecosystems. Experienced in adversary simulation, exploit development, AI-assisted penetration testing, technical risk communication, and hands-on security awareness training."
+summary = "Cybersecurity Engineer focused on offensive security assessments across medical devices and cloud ecosystems. Experienced in adversary simulation, exploit development, AI-assisted penetration testing, technical risk communication, and hands-on security awareness training."
 
 [[highlights]]
 label = "Certifications"
