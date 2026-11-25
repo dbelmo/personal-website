@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
@@ -10,6 +10,10 @@
   Cache-Control: public, max-age=300, must-revalidate
 
 /main.css
+  ! Cache-Control
+  Cache-Control: public, max-age=86400
+
+/theme.js
   ! Cache-Control
   Cache-Control: public, max-age=86400
 
