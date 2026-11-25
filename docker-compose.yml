@@ -17,27 +17,3 @@ services:
     mem_limit: 64m
     cpus: 0.5
     restart: unless-stopped
-
-  # Optional: Automatic Let's Encrypt HTTPS + HTTP/3 for small VM deployments
-  # Start with: SITE_DOMAIN=yourdomain.com docker compose --profile tls up -d
-  caddy:
-    image: caddy:2-alpine
-    container_name: personal-website-tls
-    profiles: ["tls"]
-    ports:
-      - "80:80"
-      - "443:443"
-      - "443:443/udp"
-    environment:
-      - SITE_DOMAIN=${SITE_DOMAIN:-localhost}
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy_data:/data
-      - caddy_config:/config
-    depends_on:
-      - web
-    restart: unless-stopped
-
-volumes:
-  caddy_data:
-  caddy_config:

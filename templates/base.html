@@ -8,10 +8,11 @@
   <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   {% set css_hash = get_hash(path="main.css", sha_type=256, base64=false) %}
+  {% set js_hash = get_hash(path="theme.js", sha_type=256, base64=false) %}
   <link rel="stylesheet" href="/main.css?h={{ css_hash | truncate(length=12, end="") }}">
+  <script src="/theme.js?h={{ js_hash | truncate(length=12, end="") }}"></script>
 </head>
 <body>
-  <input type="checkbox" id="theme-toggle" class="sr-only" aria-label="Toggle color theme">
   <input type="checkbox" id="nav-toggle" class="sr-only" aria-label="Toggle navigation menu">
 
   <div class="site-shell">
@@ -32,7 +33,7 @@
         </nav>
 
         <div class="header-actions">
-          <label for="theme-toggle" class="theme-switch" title="Switch dark or light theme">
+          <button type="button" id="theme-toggle" class="theme-switch" aria-label="Switch dark or light theme" title="Switch dark or light theme">
             <span class="theme-icon icon-sun" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="4"/>
@@ -46,7 +47,7 @@
             </span>
             <span class="theme-label-light">Light</span>
             <span class="theme-label-dark">Dark</span>
-          </label>
+          </button>
 
           <label for="nav-toggle" class="nav-burger" aria-label="Open Menu">
             <span></span>

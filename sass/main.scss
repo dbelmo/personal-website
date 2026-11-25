@@ -55,7 +55,7 @@
   color-scheme: light;
 }
 
-// Default: Dark mode; checked toggles to Light
+// Default: Dark mode; respects OS preference unless overridden via data-theme
 :root {
   @include theme-dark;
   --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
@@ -65,11 +65,7 @@
   --max-w: 1120px;
 }
 
-:root:has(#theme-toggle:checked) {
-  @include theme-light;
-}
-
-// Toggle button label states (Dark default -> show "Light" option)
+// Toggle button label states (Dark -> show "Light" option; Light -> show "Dark" option)
 .theme-switch .icon-sun,
 .theme-switch .theme-label-light {
   display: inline-flex;
@@ -80,25 +76,24 @@
   display: none;
 }
 
-#theme-toggle:checked ~ .site-shell .theme-switch .icon-sun,
-#theme-toggle:checked ~ .site-shell .theme-switch .theme-label-light {
-  display: none;
-}
-
-#theme-toggle:checked ~ .site-shell .theme-switch .icon-moon,
-#theme-toggle:checked ~ .site-shell .theme-switch .theme-label-dark {
-  display: inline-flex;
-}
-
-// OS Light preference: default Light, checked flips to Dark
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme="dark"]) {
     @include theme-light;
   }
 
-  :root:has(#theme-toggle:checked) {
-    @include theme-dark;
+  :root:not([data-theme="dark"]) .theme-switch .icon-sun,
+  :root:not([data-theme="dark"]) .theme-switch .theme-label-light {
+    display: none;
   }
+
+  :root:not([data-theme="dark"]) .theme-switch .icon-moon,
+  :root:not([data-theme="dark"]) .theme-switch .theme-label-dark {
+    display: inline-flex;
+  }
+}
+
+:root[data-theme="light"] {
+  @include theme-light;
 
   .theme-switch .icon-sun,
   .theme-switch .theme-label-light {
@@ -109,14 +104,18 @@
   .theme-switch .theme-label-dark {
     display: inline-flex;
   }
+}
 
-  #theme-toggle:checked ~ .site-shell .theme-switch .icon-sun,
-  #theme-toggle:checked ~ .site-shell .theme-switch .theme-label-light {
+:root[data-theme="dark"] {
+  @include theme-dark;
+
+  .theme-switch .icon-sun,
+  .theme-switch .theme-label-light {
     display: inline-flex;
   }
 
-  #theme-toggle:checked ~ .site-shell .theme-switch .icon-moon,
-  #theme-toggle:checked ~ .site-shell .theme-switch .theme-label-dark {
+  .theme-switch .icon-moon,
+  .theme-switch .theme-label-dark {
     display: none;
   }
 }
@@ -1701,7 +1700,7 @@ p {
 
 @media print {
   :root,
-  :root:has(#theme-toggle:checked) {
+  :root[data-theme="dark"] {
     @include theme-light;
   }
 

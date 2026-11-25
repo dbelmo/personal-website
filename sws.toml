@@ -18,7 +18,7 @@ log-level = "warn"
 [[advanced.headers]]
 source = "**/*"
 [advanced.headers.headers]
-Content-Security-Policy = "default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+Content-Security-Policy = "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
 Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
@@ -29,6 +29,6 @@ Cross-Origin-Resource-Policy = "same-origin"
 Cache-Control = "public, max-age=300, must-revalidate"
 
 [[advanced.headers]]
-source = "**/*.{css,svg,ico,woff2,png,webp}"
+source = "**/*.{css,js,svg,ico,woff2,png,webp}"
 [advanced.headers.headers]
 Cache-Control = "public, max-age=86400"

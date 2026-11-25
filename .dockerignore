@@ -3,7 +3,6 @@
 public
 Dockerfile
 docker-compose.yml
-Caddyfile
 README.md
 .gitignore
 .dockerignore

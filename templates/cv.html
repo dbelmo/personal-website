@@ -57,7 +57,7 @@
         <h2 class="cv-heading"><span class="idx">03</span> Certifications</h2>
         <div class="accordion-stack">
           {% for cert in cv.certifications %}
-          <details class="dossier-details" {% if loop.first %}open{% endif %}>
+          <details class="dossier-details">
             <summary>
               <span class="cert-code">{{ cert.code }}</span>
               <span class="summary-main">
