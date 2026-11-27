@@ -1,0 +1,161 @@
+[profile]
+name = "David Belmonte"
+handle = "david@redteam"
+title = "Ingeniero de Ciberseguridad"
+subtitle = "Pentesting · Operaciones Red Team · Dispositivos Médicos y Seguridad Cloud"
+location = "España"
+availability = "Seguridad Ofensiva · Red Team · Cloud y Dispositivos Médicos"
+summary = "Ingeniero de Ciberseguridad enfocado en evaluaciones de seguridad ofensiva en dispositivos médicos y ecosistemas cloud. Experiencia en simulación de adversarios, desarrollo de exploits, pentesting asistido por IA, comunicación técnica de riesgos y formación práctica en concienciación de seguridad."
+
+[[experience]]
+role = "Ingeniero de Ciberseguridad"
+organization = "Werfen"
+location = "España"
+period = "Sep 2021 – Actualidad"
+type = "Jornada completa"
+summary = "Pentesting en dispositivos médicos regulados y plataformas sanitarias en la nube, colaborando con equipos de ingeniería para cerrar rutas de ataque de alto impacto."
+bullets = [
+    "Pentesting de dispositivos médicos, productos cloud, aplicaciones web y redes.",
+    "Uso de IA para acelerar workflows de pentesting, reconocimiento y desarrollo de exploits.",
+    "Apoyo a equipos técnicos y de producto para comprender riesgos reales de ciberseguridad mediante revisiones técnicas de informes de pentesting.",
+    "Impulso de la concienciación en ciberseguridad dentro de la empresa mediante sesiones introductorias y laboratorios prácticos."
+]
+tags = ["Dispositivos Médicos", "Cloud Security", "Exploit Dev", "Pentesting con IA", "Revisión de Riesgos", "Labs Prácticos"]
+
+[[experience]]
+role = "Ingeniero de Ciberseguridad (Prácticas)"
+organization = "Werfen"
+location = "España"
+period = "Abr 2021 – Jun 2021"
+type = "Prácticas"
+summary = "Evaluación práctica de seguridad ofensiva en instrumentación médica heredada y elaboración de informes técnicos completos."
+bullets = [
+    "Pentesting de versiones anteriores de dispositivos médicos, cubriendo tanto las pruebas como el informe técnico estructurado.",
+    "Ejecución de distintos escenarios de seguridad ofensiva demostrando diferentes vías de explotación sobre el instrumento."
+]
+tags = ["Dispositivos Médicos Legacy", "Escenarios Ofensivos", "Informes Técnicos"]
+
+[[education]]
+degree = "Grado en Ingeniería Informática"
+institution = "Universitat Autònoma de Barcelona"
+location = "Cerdanyola del Vallès, España"
+period = "2017 – 2021"
+level = "Nivel EQF 6"
+notes = "Base sólida en arquitectura de computadores, sistemas operativos, redes, ingeniería del software y seguridad de sistemas."
+
+[[certifications]]
+code = "CRTL"
+name = "Certified Red Team Lead"
+issuer = "Zero-Point Security"
+date = "Jul 2026"
+mode = "Online"
+tier = "Lead"
+focus = "Emulación Avanzada de Adversarios y EDR Evasion"
+summary = "Operaciones avanzadas de Red Team centradas en evadir controles EDR modernos, defensas corporativas hardenizadas y mantener estricta seguridad operacional (OPSEC)."
+competencies = [
+    "Simulación y emulación de adversarios",
+    "Cobalt Strike",
+    "Operaciones Red Team",
+    "Command and Control (C2)",
+    "Post-explotación",
+    "Movimiento lateral",
+    "Defense evasion avanzada",
+    "EDR evasion",
+    "Bypass de controles de seguridad",
+    "Sigilo y OPSEC"
+]
+
+[[certifications]]
+code = "CRTO"
+name = "Certified Red Team Operator"
+issuer = "Zero-Point Security"
+date = "May 2026"
+mode = "Online"
+tier = "Operator"
+focus = "Operaciones Red Team en Entornos Corporativos y C2"
+summary = "Red teaming práctico en entornos corporativos simulados de Active Directory mediante Cobalt Strike, OPSEC disciplinado y tácticas realistas de adversario."
+competencies = [
+    "Simulación y emulación de adversarios",
+    "Cobalt Strike",
+    "Operaciones Red Team",
+    "Command and Control (C2)",
+    "Post-explotación",
+    "Movimiento lateral",
+    "Defense evasion",
+    "Sigilo y OPSEC"
+]
+
+[[certifications]]
+code = "CPTS"
+name = "Certified Penetration Testing Specialist"
+issuer = "Hack The Box"
+date = "Ene 2026"
+mode = "Online"
+tier = "Specialist"
+focus = "Pentesting Integral y Encadenamiento de Vulnerabilidades"
+summary = "Certificación práctica exigente de pentesting orientada al descubrimiento en profundidad de vulnerabilidades, encadenamiento de exploits, demostración de impacto e informes profesionales."
+competencies = [
+    "Identificación y evaluación de vulnerabilidades",
+    "Desarrollo de exploits y explotación",
+    "Detección de vectores de ataque no evidentes",
+    "Encadenamiento de vulnerabilidades",
+    "Análisis de rutas de ataque",
+    "Resolución creativa en auditorías de seguridad",
+    "Evaluación y demostración de impacto",
+    "Guía de remediación de seguridad",
+    "Elaboración profesional de informes de pentesting",
+    "Comunicación de riesgos"
+]
+
+[[skill_groups]]
+category = "Seguridad Ofensiva y Red Team"
+items = [
+    "Pentesting",
+    "Operaciones Red Team",
+    "Cobalt Strike y C2",
+    "Seguridad de Aplicaciones Web",
+    "OWASP Top 10",
+    "Exploit Dev y Encadenamiento",
+    "EDR y Defense Evasion",
+    "Kali Linux"
+]
+
+[[skill_groups]]
+category = "Cloud, Redes y Seguridad de Producto"
+items = [
+    "Seguridad de Redes",
+    "Cloud Security (AWS)",
+    "Azure Cloud Security",
+    "Seguridad de Dispositivos Médicos",
+    "Movimiento Lateral y Post-Explotación"
+]
+
+[[skill_groups]]
+category = "Ingeniería, IA y Asesoramiento"
+items = [
+    "Python",
+    "Pentesting y Exploit Dev con IA",
+    "Revisiones Técnicas de Riesgos",
+    "Informes de Pentesting",
+    "Concienciación y Labs Prácticos"
+]
+
+[[languages]]
+name = "Español"
+cefr = "Nativo"
+detail = "Lengua materna"
+
+[[languages]]
+name = "Catalán"
+cefr = "Nativo"
+detail = "Lengua materna"
+
+[[languages]]
+name = "Inglés"
+cefr = "C1"
+detail = "Comprensión, lectura, expresión oral y escrita"
+
+[[languages]]
+name = "Alemán"
+cefr = "A1"
+detail = "Comprensión, lectura, expresión oral y escrita"

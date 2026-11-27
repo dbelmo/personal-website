@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}CV &amp; Experience — {{ config.title }}{% endblock title %}
+{% block title %}{% set active_lang = lang | default(value=config.default_language) %}{{ trans(key="cv_page_title", lang=active_lang) }} — {{ config.title }}{% endblock title %}
 
 {% block content %}
-{% set cv = load_data(path="data/cv.toml") %}
+{% set active_lang = lang | default(value=config.default_language) %}
+{% set cv = load_data(path="data/cv." ~ active_lang ~ ".toml") %}
 
 <section class="page-banner">
   <div class="container">
-    <span class="section-kicker">// CURRICULUM VITAE</span>
+    <span class="section-kicker">{{ trans(key="cv_kicker", lang=active_lang) }}</span>
     <h1>{{ cv.profile.name }}</h1>
     <p class="banner-sub">{{ cv.profile.title }} — {{ cv.profile.subtitle }}</p>
   </div>
@@ -17,12 +18,12 @@
   <div class="container cv-layout">
     <div class="cv-main">
       <div class="cv-block" id="profile">
-        <h2 class="cv-heading"><span class="idx">01</span> Profile</h2>
+        <h2 class="cv-heading"><span class="idx">01</span> {{ trans(key="cv_profile", lang=active_lang) }}</h2>
         <p class="prose-lead">{{ cv.profile.summary }}</p>
       </div>
 
       <div class="cv-block" id="experience">
-        <h2 class="cv-heading"><span class="idx">02</span> Work Experience</h2>
+        <h2 class="cv-heading"><span class="idx">02</span> {{ trans(key="cv_experience", lang=active_lang) }}</h2>
         <div class="timeline">
           {% for job in cv.experience %}
           <article class="timeline-item">
@@ -54,7 +55,7 @@
       </div>
 
       <div class="cv-block" id="certifications">
-        <h2 class="cv-heading"><span class="idx">03</span> Certifications</h2>
+        <h2 class="cv-heading"><span class="idx">03</span> {{ trans(key="cv_certifications", lang=active_lang) }}</h2>
         <div class="accordion-stack">
           {% for cert in cv.certifications %}
           <details class="dossier-details">
@@ -80,7 +81,7 @@
       </div>
 
       <div class="cv-block" id="education">
-        <h2 class="cv-heading"><span class="idx">04</span> Education</h2>
+        <h2 class="cv-heading"><span class="idx">04</span> {{ trans(key="cv_education", lang=active_lang) }}</h2>
         {% for edu in cv.education %}
         <article class="card">
           <div class="card-top">
@@ -97,7 +98,7 @@
 
     <aside class="cv-sidebar">
       <div class="card sidebar-card" id="skills">
-        <h2 class="cv-heading"><span class="idx">05</span> Technical Skills</h2>
+        <h2 class="cv-heading"><span class="idx">05</span> {{ trans(key="cv_skills", lang=active_lang) }}</h2>
         {% for group in cv.skill_groups %}
         <div class="skill-group">
           <h3>{{ group.category }}</h3>
@@ -111,7 +112,7 @@
       </div>
 
       <div class="card sidebar-card" id="languages">
-        <h2 class="cv-heading"><span class="idx">06</span> Languages</h2>
+        <h2 class="cv-heading"><span class="idx">06</span> {{ trans(key="cv_languages", lang=active_lang) }}</h2>
         <div class="lang-list">
           {% for lang in cv.languages %}
           <div class="lang-row">

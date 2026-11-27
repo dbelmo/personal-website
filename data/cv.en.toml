@@ -7,35 +7,15 @@ location = "Spain"
 availability = "Offensive Security · Red Teaming · Cloud & Device Assessments"
 summary = "Cybersecurity Engineer focused on offensive security assessments across medical devices and cloud ecosystems. Experienced in adversary simulation, exploit development, AI-assisted penetration testing, technical risk communication, and hands-on security awareness training."
 
-[[highlights]]
-label = "Certifications"
-value = "CRTL · CRTO · CPTS"
-detail = "Offensive & Red Team"
-
-[[highlights]]
-label = "Experience"
-value = "5+ Years"
-detail = "Medical Devices & Cloud"
-
-[[highlights]]
-label = "Core Focus"
-value = "Red Teaming"
-detail = "Pentesting & Exploit Dev"
-
-[[highlights]]
-label = "Languages"
-value = "ES · CA · EN · DE"
-detail = "Native ES/CA · C1 EN"
-
 [[experience]]
-role = "Cyber Security Engineer"
+role = "Cybersecurity Engineer"
 organization = "Werfen"
 location = "Spain"
 period = "Sep 2021 – Present"
 type = "Full-Time"
 summary = "Penetration testing across regulated medical devices and cloud-based healthcare platforms, partnering with engineering teams to close high-impact attack paths."
 bullets = [
-    "Penetration testing of medical devices and cloud-based products across web, network, and embedded interfaces.",
+    "Penetration testing of medical devices, cloud-based products, web applications and networks.",
     "Leveraging AI to accelerate penetration testing workflows, reconnaissance, and exploit development.",
     "Helping engineering and product teams understand real-world cybersecurity risks through technical reviews of penetration test reports.",
     "Raising cybersecurity awareness across the organization through introductory sessions and interactive hands-on labs."
@@ -43,7 +23,7 @@ bullets = [
 tags = ["Medical Devices", "Cloud Security", "Exploit Dev", "AI-Assisted Pentesting", "Risk Reviews", "Hands-On Labs"]
 
 [[experience]]
-role = "Cyber Security Engineer (Internship)"
+role = "Cybersecurity Engineer (Internship)"
 organization = "Werfen"
 location = "Spain"
 period = "Apr 2021 – Jun 2021"
@@ -179,33 +159,3 @@ detail = "Listening, Reading, Speaking & Writing"
 name = "German"
 cefr = "A1"
 detail = "Listening, Reading, Speaking & Writing"
-
-[[killchain]]
-phase = "01"
-name = "Discovery & Attack Paths"
-certs = ["CPTS"]
-description = "Uncovering non-obvious attack vectors, misconfigurations, and chained exposure paths across web, network, cloud, and devices."
-
-[[killchain]]
-phase = "02"
-name = "Exploitation & Initial Access"
-certs = ["CPTS", "CRTO"]
-description = "Developing and adapting exploits—augmented with Python and AI workflows—to validate real-world impact safely."
-
-[[killchain]]
-phase = "03"
-name = "C2 & Lateral Movement"
-certs = ["CRTO", "CRTL"]
-description = "Operating Cobalt Strike C2 infrastructure and simulating realistic adversary movement through enterprise environments."
-
-[[killchain]]
-phase = "04"
-name = "EDR & Defense Evasion"
-certs = ["CRTL", "CRTO"]
-description = "Applying OPSEC discipline, security control bypasses, and advanced evasion techniques to stress-test detection engineering."
-
-[[killchain]]
-phase = "05"
-name = "Risk & Remediation"
-certs = ["CPTS"]
-description = "Translating complex exploit chains into clear engineering reviews, remediation plans, and hands-on awareness labs."

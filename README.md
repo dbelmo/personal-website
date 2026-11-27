@@ -6,7 +6,7 @@ Static CV and cybersecurity portfolio built with an end-to-end Rust toolchain (*
 
 ```mermaid
 flowchart TD
-    CV["data/cv.toml (CV Content)"]
+    CV["data/cv.*.toml (EN · ES · CA Content)"]
     UI["templates/ + sass/ (HTML & Themes)"]
     Assets["static/ (Icons & theme.js)"]
 
@@ -49,8 +49,8 @@ flowchart TD
 ## Project Structure
 
 - `config.toml` — Site metadata and external profile links (GitHub, LinkedIn)
-- `data/cv.toml` — Structured CV data (experience, certifications, education, skills, languages)
-- `content/` — Page definitions (`_index.md`, `cv.md`)
+- `data/cv.en.toml`, `data/cv.es.toml`, `data/cv.ca.toml` — Structured CV data in English, Spanish, and Catalan
+- `content/` — Localized page definitions (`_index*.md`, `cv*.md`)
 - `templates/` — Tera HTML templates (`base.html`, `index.html`, `cv.html`, `404.html`)
 - `sass/main.scss` — Dark/Light themes and layout styles
 - `static/` — Static assets (`favicon.svg`, `robots.txt`, `theme.js`)
@@ -66,7 +66,7 @@ Open `http://localhost:8080` (override the host port with `PORT=8081 docker comp
 
 ## Updating Content
 
-- Edit [data/cv.toml](data/cv.toml) to update experience, certifications, education, skills, or languages.
+- Edit [data/cv.en.toml](data/cv.en.toml), [data/cv.es.toml](data/cv.es.toml), and [data/cv.ca.toml](data/cv.ca.toml) to update experience, certifications, education, skills, or languages.
 - Edit [config.toml](config.toml) to update site metadata or social links.
 - Rebuild and restart with:
 
